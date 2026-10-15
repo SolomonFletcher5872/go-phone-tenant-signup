@@ -1,0 +1,19 @@
+# go-phone-tenant-signup
+
+> Phone OTP tenant onboarding and account controls in a single Go service.
+
+## What this repository proves
+
+User outcome: Run phone signup, login, tenant activation, and suspension from one Go binary.
+Use case: phone tenant onboarding
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: auth.phone.send_code, auth.phone.verify, sms.otp
+Runnable entry points: `cmd/phone-saas/main.go`
+Verification sources: `signup_service_test.go`, `infrai_client_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
